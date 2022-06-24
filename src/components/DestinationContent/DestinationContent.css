@@ -1,0 +1,269 @@
+.dest__img {
+  height: 10.625rem;
+  width: 10.625rem;
+  margin-bottom: 1.625rem;
+}
+
+.tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-btn-wrapper {
+  width: 63.333333%;
+  height: 1.75rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/*---------------------------------------------*/
+
+.dest__tab-btn {
+  padding: 0;
+  height: 100%;
+  border: none;
+
+  background-color: transparent;
+  color: var(--scnd-clr);
+  font-family: var(--barlowCond);
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: var(--ls-2-35);
+  text-transform: uppercase;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.dest__tab-btn::after,
+.dest__tab-btn:disabled::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+
+  bottom: 0;
+}
+
+.dest__tab-btn::after {
+  left: 50%;
+  width: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease-out;
+}
+
+.dest__tab-btn:disabled::after {
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+}
+
+/*---------------------------------------------*/
+
+.tab-content,
+.average-distance-wrapper,
+.travel-time-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dest__destination-title {
+  font-family: var(--bellefair);
+  font-weight: 400;
+  color: var(--white);
+  font-size: var(--fz56px);
+  text-transform: uppercase;
+}
+
+.dest__desc {
+  width: 87.2%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #383b4b;
+
+  font-family: var(--barlow);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.67;
+  color: var(--scnd-clr);
+  text-align: center;
+}
+
+.estimates-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-content,
+.average-distance-wrapper {
+  margin-bottom: 2rem;
+}
+
+.travel-time-wrapper {
+  margin-bottom: 3.625rem;
+}
+
+.average-distance-wrapper,
+.travel-time-wrapper {
+  width: 57.6%;
+}
+
+.title {
+  font-family: var(--barlowCond);
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: var(--ls-2-35);
+  color: var(--scnd-clr);
+  text-transform: uppercase;
+}
+
+.quantity {
+  font-family: var(--bellefair);
+  font-weight: 400;
+  font-size: var(--fz28px);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/*---------------------------------------------*/
+
+@media (hover: none) {
+  .dest__tab-btn:active::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .dest__tab-btn:hover::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/*---------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+  .dest__img {
+    height: 18.75rem;
+    width: 18.75rem;
+    margin-bottom: 3.3125rem;
+  }
+
+  .average-distance-wrapper,
+  .travel-time-wrapper {
+    margin-bottom: 0;
+  }
+
+  .tab-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-content {
+    margin-bottom: 3.0625rem;
+  }
+
+  .tab-btn-wrapper {
+    width: 37.174479%;
+    height: 2.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .dest__tab-btn {
+    font-size: 1rem;
+    letter-spacing: var(--ls-2-7);
+  }
+
+  .dest__destination-title {
+    font-size: 5rem;
+  }
+
+  .dest__desc {
+    padding-bottom: 0;
+    border-bottom: none;
+
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .dest__desc,
+  .estimates-container {
+    width: 74.609375%;
+  }
+
+  .estimates-container {
+    height: 5.625rem;
+    border-top: 1px solid #383b4b;
+    margin-bottom: 3.875rem;
+
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/*---------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+  .dest__img {
+    height: 49.444444vh;
+    width: 49.444444vh;
+    margin-bottom: 0;
+    margin-left: 4rem;
+
+    grid-column: 1/2;
+    align-self: flex-end;
+  }
+
+  .tab-wrapper {
+    height: 52.444444vh;
+    align-items: flex-start;
+    align-self: flex-end;
+  }
+
+  .tab-content,
+  .average-distance-wrapper,
+  .travel-time-wrapper {
+    align-items: flex-start;
+  }
+
+  .tab-content {
+    margin-bottom: 6vh;
+  }
+
+  .tab-btn-wrapper {
+    width: 46.957236%;
+    margin-bottom: 4.111111vh;
+  }
+
+  .estimates-container {
+    margin-bottom: 0;
+  }
+
+  .dest__destination-title {
+    font-size: 11.111111vh;
+    margin-bottom: 1.777778vh;
+  }
+
+  .dest__desc {
+    text-align: left;
+    font-size: 2vh;
+    line-height: 3.555556vh;
+  }
+
+  .estimates-container {
+    border-top: 1px solid var(--scnd-clr);
+  }
+}

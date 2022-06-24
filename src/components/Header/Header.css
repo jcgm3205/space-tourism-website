@@ -1,0 +1,58 @@
+.hdr {
+  height: 4rem;
+  padding: 1.5rem 1.5rem 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hdr__logo {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.hdr__burger-btn {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  color: var(--white);
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+
+  font-size: 1.5rem;
+}
+
+.inv {
+  opacity: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .hdr {
+    height: 6rem;
+    padding: 0;
+    margin-left: 5.078125%;
+  }
+
+  .hdr__logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .hdr__burger-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hdr {
+    margin-top: 4.444444vh;
+    margin-left: 3.81944444%;
+    height: 10.666667vh;
+  }
+}
